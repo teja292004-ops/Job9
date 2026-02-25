@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proof & Submission - Job Notification Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <h1 class="nav-title">Job Notification Tracker</h1>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Dashboard</a>
+                <a href="proof.html" class="nav-link active">Proof</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Project 1 — Job Notification Tracker</h2>
+            <div class="status-badge" id="statusBadge">Not Started</div>
+        </section>
+
+        <section class="card">
+            <h3>A) Step Completion Summary</h3>
+            <div class="completion-summary" id="completionSummary">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <section class="card">
+            <h3>B) Artifact Collection</h3>
+            <form id="artifactForm" class="artifact-form">
+                <div class="form-group">
+                    <label for="lovableLink">Lovable Project Link *</label>
+                    <input 
+                        type="url" 
+                        id="lovableLink" 
+                        placeholder="https://lovable.dev/projects/..." 
+                        required
+                    >
+                    <span class="error-message" id="lovableError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="githubLink">GitHub Repository Link *</label>
+                    <input 
+                        type="url" 
+                        id="githubLink" 
+                        placeholder="https://github.com/username/repo" 
+                        required
+                    >
+                    <span class="error-message" id="githubError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="deployedLink">Deployed URL (Vercel or equivalent) *</label>
+                    <input 
+                        type="url" 
+                        id="deployedLink" 
+                        placeholder="https://your-project.vercel.app" 
+                        required
+                    >
+                    <span class="error-message" id="deployedError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save Artifacts</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h3>Test Checklist Status</h3>
+            <div class="test-status" id="testStatus">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <section class="card">
+            <h3>Final Submission</h3>
+            <p class="info-text">Complete all requirements above to enable submission export.</p>
+            <button id="copySubmission" class="btn btn-secondary" disabled>Copy Final Submission</button>
+            <div id="submissionMessage" class="submission-message"></div>
+        </section>
+    </main>
+
+    <script src="proof.js"></script>
+</body>
+</html>
